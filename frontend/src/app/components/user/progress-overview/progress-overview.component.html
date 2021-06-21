@@ -1,0 +1,37 @@
+<div *ngIf="account != null">
+
+  <div id="tableDiv">
+    <table id="score">
+      <tr>
+        <th></th>
+        <th>Score A - Mijn puzzel</th>
+        <th></th>
+        <th>Score B - Puzzels oplossen</th>
+      </tr>
+
+      <tr></tr>
+
+      <tr>
+        <td><p style="font-weight: bold">Ranking eigen oplossing</p></td>
+        <td><p>{{account.score.scoreASolutionRanking}}</p></td>
+        <td><p style="font-weight: bold">Aantal puzzels opgelost</p></td>
+        <td><p>{{account.score.scoreBSolutionScore}}</p></td>
+      </tr>
+
+      <tr>
+        <td><p style="font-weight: bold">Verhouding jouw score met topscore</p></td>
+        <td><p>{{account.score.scoreARelativeScore}}</p></td>
+        <td><p style="font-weight: bold">Energie over bij puzzels </p></td>
+        <td><p>{{account.score.scoreBleftEnergy}}</p></td>
+      </tr>
+
+      <tr>
+        <td><p style="font-weight: bold">Variatie in puzzels</p></td>
+        <td><p>{{account.score.scoreASolutionVariation}}</p></td>
+        <td><p style="font-weight: bold">Totaal score</p></td>
+        <td><p>{{account.score.scoreASolutionRanking + account.score.scoreBSolutionScore * 2 + account.score.scoreARelativeScore + account.score.scoreBleftEnergy + account.score.scoreASolutionVariation}}</p></td>
+      </tr>
+
+    </table>
+  </div>
+</div>

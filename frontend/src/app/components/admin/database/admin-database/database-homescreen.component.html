@@ -1,0 +1,49 @@
+<div class="menu">
+  <div id="pageTitle">
+    <h1>Database</h1>
+    <hr size="2" noshade>
+  </div>
+
+  <div>
+
+
+    <div id="menuButtonsTop">
+
+      <button id="makeBackup"
+              (click)="makeBackup()">
+        <p>Back-up maken</p>
+      </button>
+      <button id="restoreBackup"
+              (click)="restoreBackup()">
+        <p>Back-up terugzetten</p>
+      </button>
+      <button style="margin-right: 0px"
+              id="resetdatabase"
+              (click)="resetDatabase()">
+        <p>Database resetten</p>
+      </button>
+
+    </div>
+
+    <div id="menuButtonsBottom">
+
+      <button id="exportGrades"
+              (click)="exportGrades()">
+        <p>Cijfers Exporteren</p>
+      </button>
+      <button id="adminpanel" [routerLink]="['/admin/database/document']">
+        <p>Documenten</p>
+      </button>
+      <button id="stopsystem" style="margin-right: 0px"
+              (click)="exitSystem()">
+        <p>Stop Systeem</p>
+      </button>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>

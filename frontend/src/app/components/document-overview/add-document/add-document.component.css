@@ -1,0 +1,33 @@
+#pageTitle{
+  width: 500px;
+  margin: auto;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #545454;
+}
+
+button{
+  min-width: 160px;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: #32B8B0;
+  align-items: flex-end;
+}
+
+button:hover{
+  background-color: #52a398;
+}
+
+button:disabled{
+  background-color: rgba(38, 96, 91, 0.62);
+}
+
+#formDiv{
+  margin: auto;
+  width: 15%;
+}

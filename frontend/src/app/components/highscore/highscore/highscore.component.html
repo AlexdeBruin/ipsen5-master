@@ -1,0 +1,52 @@
+<div id="title">
+  <h1>HighScore</h1>
+  <hr size="2" noshade width="40%">
+</div>
+
+
+<div id="tableDiv">
+
+
+    <div id="thropyDiv">
+
+      <div id="second" style="display: inline-block; ">
+        <img src="/assets/Resources/img/silver_thropy.png" width="100px" style="margin-left: 10px">
+        <br>
+        <button class="btn">{{getAccount(1) == null ? "" : getAccount(1).accountName}}</button>
+      </div>
+
+
+      <div id="first" style=" display: inline-block; position: relative; bottom: 20px">
+        <img src="/assets/Resources/img/gold_thropy.png" width="100px" style="margin-left: 10px">
+        <br>
+        <button class="btn">{{getAccount(0) == null ? "" : getAccount(0).accountName}}</button>
+      </div>
+
+      <div id="third" style="display: inline-block;">
+        <img src="/assets/Resources/img/bronse_thropy.png" width="100px" style="margin-left: 10px">
+        <br>
+        <button class="btn">{{getAccount(2) == null ? "" : getAccount(2).accountName}}</button>
+      </div>
+
+  </div>
+  <br>
+  <table id="opdrachten">
+    <tr>
+      <th>Plek</th>
+      <th>Groepsnaam</th>
+      <th>Score A</th>
+      <th>Score B</th>
+      <th>Totaal Score</th>
+    </tr>
+
+    <tr *ngFor="let score of scoreList">
+      <td>{{countListItem(score) + 1}}</td>
+      <td>{{score.accountName}}</td>
+      <td>{{score.scoreA }}</td>
+      <td>{{score.scoreB }}</td>
+      <td>{{score.totaalScore}}</td>
+    </tr>
+
+  </table>
+
+</div>

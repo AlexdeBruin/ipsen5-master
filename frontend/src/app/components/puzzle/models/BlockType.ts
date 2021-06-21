@@ -1,0 +1,8 @@
+export enum BlockType {
+
+  SOLIDBLOCK = "SOLIDBLOCK",
+  PORTAL = "PORTAL",
+  HEROBLOCK = "HEROBLOCK",
+  REMOVEBLOCK = "REMOVEBLOCK"
+
+}

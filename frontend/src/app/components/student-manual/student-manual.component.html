@@ -1,0 +1,281 @@
+<div id="manualDiv" style="padding-bottom: 20px">
+
+  <h1>Handleiding IPOSE taal</h1>
+
+  <p>In deze handleiding zal de syntax van de programmeertaal VisionCode uitgelegd worden. Daarna zal de puzzel zelf uitgelegd worden.</p>
+
+  <h1>Inhoud</h1>
+  <ul>
+    <li><a (click)="scrollTo('code')">VisionCode</a></li>
+    <li><a (click)="scrollTo('puzzle')">De puzzel</a></li>
+    <li><a (click)="scrollTo('heroes')">Heroes</a></li>
+  </ul>
+
+
+  <h1 id="code">VisionCode</h1>
+  <p>VisionCode is een programmeertaal die speciaal ontworpen is voor deze challengeweek. In dit hoofdstuk leggen wij uit hoe de programmeertaal werkt.
+  Een eerste (en belangrijke) mededeling is dat elke spatie die je in de syntax hieronder ziet verplicht is. De code zal NIET werken zonder deze spaties.
+  De tweede mededeling is dat deze programmeertaal niet hoofdlettergevoelig (ook variabelen niet), hou hier dus rekening mee.</p>
+
+  <h2>Imports</h2>
+  <p>Om sommige functionaliteiten te gebruiken moet je deze eerst importeren. De twee importeerbare dingen zijn kleuroog en zwart wit oog:</p>
+  <p>import kleuroog</p>
+  <p>import zwoog</p>
+  <p>het is belangrijk om het gene wat je wil gebruiken bovenin je code te importeren. Wat kleuroog en zwartwit oog precies inhoudt zal later behandelt worden</p>
+
+  <h2>use</h2>
+  <p>het statement "use" is belangrijk wordt gebruikt om een hero te selecteren. De hero die je selecteert zal uiteindelijk door de puzzel heen lopen. Elke hero heeft andere methodes die hij kan uitvoeren</p>
+  <p>use ironman</p>
+  <p>Het is belangrijk dat dit statement wordt uitgevoerd voor de eerste methode wordt aangeroepen. Een good practice is om dit statement na je imports uit te voeren.
+  Hieronder is de syntax van alle heroes. zorg ervoor dat je het exact overtypt</p>
+  <table class="score">
+    <tr>
+      <th>heroes</th>
+    </tr>
+    <tr><td>batman</td></tr>
+    <tr><td>blackPanther</td></tr>
+    <tr><td>blackWidow</td></tr>
+    <tr><td>captainAmerica</td></tr>
+    <tr><td>deadpool</td></tr>
+    <tr><td>doctorStrange</td></tr>
+    <tr><td>hulk</td></tr>
+    <tr><td>ironman</td></tr>
+    <tr><td>scarletWitch</td></tr>
+    <tr><td>spiderman</td></tr>
+    <tr><td>superman</td></tr>
+    <tr><td>thor</td></tr>
+    <tr><td>wonderwoman</td></tr>
+  </table>
+  <p>Wat elke hero precies doet is in het hoofdstuk Heroes uitgelegd. </p>
+
+
+  <h2>Variabelen</h2>
+  <p>In VisionCode is er een mogelijkheid om variabelen te definiëren.</p>
+  <p>mijnvariabele = 0</p>
+
+  <p>variabelen kunnen alleen integers zijn en dus geen strings of boolean. Een variabelenaam kan elk woord zijn, alleen mag het geen keyword zijn (zoals if of while) en mag niet beginnen met een cijfer. Je kan ook meer complexere dingen doen met variabelen zoals</p>
+  <p>var1 = 5</p>
+  <p>var2 = var1 * 2</p>
+  <p>var2 zal in dit geval dus de waarde 10 terug geven. Je kan oneindig veel operatoren ( + - / * % ) achter elkaar plaatsen dus bijvoorbeeld</p>
+  <p>var1 = 5 + 2 + 3 + 4 * 3 - 1 / 8</p>
+  <p>Let wel op er wordt in deze taal geen rekening gehouden met de rekenregels. de taal voert de expressies dus in volgorde van notatie uit</p>
+
+  <p>Je kan variabelen ook updaten, dit kan op verschilende manieren</p>
+  <p>var1 = 5</p>
+  <p>var1 = var1 + 5</p>
+  <p>var1 += 5</p>
+  <p>naast += kan je ook -=   /=   *=   %= gebruiken</p>
+
+  <p>Er zijn ook 2 voorgemaakte proporties (kleurOog en zwOog). Als je deze aanroept returnt het de waarde van de achtergrond waar de hero op staat.
+  Je kan deze proporties dus niet aanpassen, maar wel aanroepen. Bijvoorbeeld</p>
+  <p>var2 = kleuroog</p>
+  <p>kleuroog zal dan dus de actuele achtergrond waarde teruggeven.</p>
+
+  <h2>Vergelijken</h2>
+  <p>In het if en while statement moet je een vergelijking plaatsen. Deze ziet er als volgt uit</p>
+  <p>5 > 4</p>
+  <p>Je kan in een vergelijking dezelfde dingen doen als met variabelen. dus hieronder een paar voorbeelden</p>
+  <p>1 == 1 (oneindige loop, belangrijk)</p>
+  <p>kleuroog >= 3 </p>
+  <p>var1 + 5 > 10</p>
+  <p>de mogelijke vergelijkingen zijn ==, !=, <=, >=, < en ></p>
+
+  <div>
+    <h2>if statement</h2>
+    <p>Het if statement werkt alsvolgt</p>
+    <p>
+      if vergelijking {{accolade}} <br>
+      block  <br>
+      {{accolade2}} else {{accolade}}  <br>
+      block  <br>
+      {{accolade2}}  <br>
+    </p>
+    <p>let goed op de spaties en de accolades, die moeten exact op deze manier geschreven worden</p>
+    <p>als je een else if wil schrijven doe je dat alsvolgt</p>
+    <p>
+      if vergelijking {{accolade}} <br>
+      block  <br>
+      {{accolade2}} else {{accolade}}  <br>
+      if vergelijking {{accolade}} <br>
+      block  <br>
+      {{accolade2}}  <br>
+      {{accolade2}}  <br>
+    </p>
+  </div>
+
+  <h2>While statement</h2>
+  <p>While statements lijken erg op if statements</p>
+  <p>while vergelijking {{accolade}} <br>
+  block <br>
+    {{accolade2}}<br> </p>
+  <p>een veel gebruikte vorm van while loops is met 1 == 1, dit zorgt voor een oneindige loop en is erg handig voor bij het oplossen van de puzzels</p>
+
+  <h2>Methoden</h2>
+  <p>Methodes zijn acties die door de heroes uitgevoerd worden. Een methode kan pas aangeroepen worden als er een hero geselecteerd is</p>
+  <p>Elke hero heeft zijn eigen selectie van methoden plus een specialeKracht. In het hoofdstuk heroes staat dit uitgelegd.</p>
+  <table class="score">
+    <tr>
+      <th>Methoden</th>
+      <th>Uitleg</th>
+    </tr>
+    <tr><td>stapVooruit</td><td>De hero gaat 1 stap vooruit</td></tr>
+    <tr><td>stapAchteruit</td><td>De hero gaat 1 stap acheruit</td></tr>
+    <tr><td>draai</td><td>De hero draait 180 graden en veranderd dus van kijkrichting</td></tr>
+    <tr><td>vliegVooruit</td><td>De hero gaat 1 stap vooruit</td></tr>
+    <tr><td>vliegOmhoog</td><td>De hero gaat 1 stap omhoog</td></tr>
+    <tr><td>vliegOmlaag</td><td>De hero gaat 1 stap omlaag</td></tr>
+    <tr><td>spring</td><td>De hero gaat 1 tile schuin omhoog 1x en 1y</td></tr>
+  </table>
+  <p>Wat elke hero precies doet is in het hoofdstuk Heroes uitgelegd. </p>
+
+<h1 id="puzzle">De puzzel</h1>
+  <p>Elke puzzel heeft een begintile en een eindtile (Villian) , het doel is om van het begin naar het einde te komen</p>
+  <img src="/assets/Resources/gifs/finishLevel.gif" width="30%" alt="">
+  <p>In het voorbeeld hierboven zie je Iron Man die vanaf het startpunt (de H) naar de Villian loopt. In dit geval is het de Joker.
+  Er zijn ook 2 andere villians namelijk Thanos en Loki, deze zijn allemaal hetzelfde. </p>
+  <p>De puzzel bestaat dus uit tiles, elke tile heeft een Forground en een Background. De background wordt gebruikt voor de kleuroog en zwoog.
+  De forground daarentegen is waar alle actie op gebeurd. Er zijn een heleboel verschillende blocks die in de puzzel geplaatst kan worden.</p>
+
+  <h2>Backgroundblocks</h2>
+  <table class="score">
+    <tr>
+      <th>Kleur</th>
+      <th>Kleuroog waarde</th>
+      <th>Zwartwit waarde</th>
+    </tr>
+    <tr><td>Grijs</td><td>0</td><td>0</td></tr>
+    <tr><td>Wit</td><td>1</td><td>1</td></tr>
+    <tr><td>Oranje</td><td>5</td><td>1</td></tr>
+    <tr><td>Geel</td><td>3</td><td>1</td></tr>
+    <tr><td>Blauw</td><td>2</td><td>1</td></tr>
+    <tr><td>Paars</td><td>6</td><td>1</td></tr>
+    <tr><td>Groen</td><td>4</td><td>1</td></tr>
+    <tr><td>Lucht</td><td>7</td><td>1</td></tr>
+  </table>
+
+  <h2>Forgroundblocks</h2>
+  <p>Er zijn een boel verschillende blocks. Er wordt een groot verschil gemaakt tussen SolidBlocks, SpecialeBlocks, items en InstantKillBlocks</p>
+
+  <h3>SolidBlocks</h3>
+  <p>Solidblocks zijn ondoordringbaar, als je er tegenaan loopt krijg je schade. Er zijn enkele heroes die solidblocks kunnen slopen, dat kan je in dat hoofdstuk lezen.
+  In deze code hieronder zie je ironman die continu rechtdoor probeert te lopen, maar niet verder kan door de solidblock.</p>
+  <img src="/assets/Resources/gifs/specialekrachtIronmanFailed.gif" width="30%" alt="">
+
+  <h3>InstantKillBlock</h3>
+  <p>Als een hero op een instantKillBlock staat is hij meteen dood, hoeveel levens hij nog heeft maakt dan niet uit.</p>
+  <p>Er zijn 2 instantKillBlocks: Lava en Water </p>
+  <img src="/assets/Resources/gifs/deathByLava.gif" width="30%" alt="">
+
+  <h3>Items</h3>
+  <p>In de puzzel kunnen er items verspreid worden. Als een hero op een item staat pakt hij deze op. </p>
+
+  <h4>Extra Life</h4>
+  <p>Geeft de hero een extra leven, hierdoor kan de 1 keer hero op een ontploffende bom of omhoogstaande spike staan</p>
+
+  <h4>Sleutel</h4>
+  <p>Als je de sleutel oppakt kan je de deur met de matchende id openen, de id zie je in de tooltip (meer informatie bij block Deur)</p>
+
+  <h4>Energie tank</h4>
+  <p>Als je de energie tank oppakt krijg je energie terug (in de tooltip kan je zien hoeveel)</p>
+
+  <h3>SpecialeBlock</h3>
+  <p>Er zijn een boel speciale blocks. Alle Speciale blocks doen iets met de hero, dit kan positief of negatief zijn.</p>
+  <p>Een belangrijk iets om te begrijpen is het feit van gravity. Als een hero ergens lopend op staat of doorheen gaat heeft hij
+  gravity op zich (hij zal dan dus naar beneden vallen er er geen solidblock onder hem staat. Als je vliegend op of doorheen iets gaat
+  heb je GEEN last van gravity.</p>
+
+  <h4>Jumping pad</h4>
+  <p>Als een hero op een jumping pad komt wordt hij een y hoeveelheid tiles omhoog geschoten (zie tooltip van de jumpind pad).
+  Na het omhoog schieten gaat de hero ook 1 stap vooruit (afhankelijk van kijkrichting dus). </p>
+  <img src="/assets/Resources/gifs/jumpingpad.gif" width="30%" alt="">
+
+  <h4>Speedboost</h4>
+  <p>Als een hero op een speedboost komt wordt hij x hoeveelheid tiles vooruit geschoten (zie tooltip van de speed boost).</p>
+  <img src="/assets/Resources/gifs/speedBoostSucces.gif" width="30%" alt="">
+  <p>Let op! Als hij zo staat ingesteld dat hij je x minder tiles vooruit stuurt dan nodig om bij de overkant te komen
+  is het misschien niet verstandig om erop te gaan staan...</p>
+  <img src="/assets/Resources/gifs/speedBoostFaillure.gif" width="30%" alt="">
+
+  <h4>Teleporter</h4>
+  <p>Als een hero op een teleporter staat wordt hij naar een andere plek in de puzzel geteleporteert. In de tooltip staat waar hij heen gaat.</p>
+  <img src="/assets/Resources/gifs/teleport.gif" width="30%" alt="">
+
+  <h4>Jumpingpads, speedboost en teleporters</h4>
+  <p>Terwijl een hero door de "force" van een jumpingpad/speedboost vooruit gaat en hij op een nieuwe jumpingpad/speedboost komt te staan wordt de
+  "force" van de 1e jumpingpad/speedboost geannuleerd. Als je in een teleporter stapt terwijl je de "force" van een jumpingpad/speedboost
+  op je hebt gaat die force na het teleporteren verder.</p>
+  <img src="/assets/Resources/gifs/speedintoJumppad.gif" width="30%" alt=""><br><br>
+  <img src="/assets/Resources/gifs/speedintoTeleport.gif" width="30%" alt="">
+
+
+  <div>
+    <h1 id="heroes">Heroes</h1>
+    <p>Voor elk level kunnen er 3 heroes geselecteerd worden uit de volgende set aan heroes:</p>
+    <img src="/assets/Resources/img/heroesLineUpBig.png" width="30%"/>
+    <p>Elke hero heeft een eigen move set een een unieke speciale kracht die gebruikt kan worden.</p>
+    <h2>Iron man</h2>
+    <p>Moves: stapVooruit, stapAchteruit, vliegVooruit, vliegOmlaag, vliegOmhoog (Let op: GEEN draai)</p>
+    <p>Specialekracht: “Energy blast”:  Ironman schiet een energie blast naar rechts, maar alleen als de tile naast hem geen solidblock is (Het zou onverstandig zijn om dat te doen!). De solidblock van de 2 tiles ernaast worden vervolgens gesloopt (Als die er zijn)</p>
+    <img src="/assets/Resources/img/heroes/ironmanSpecialkrachtExplained.png" width="10%">
+    <br>
+    <h2>Captain America</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht: Captain america zijn stapVooruit en stapAchteruit zijn enhanced en verplaatsen hem 2 tiles in plaats van 1</p>
+    <br>
+    <h2>Hulk</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht: “HULK SMASH”: Hulk sloopt de solidblock waar hij naar kijkt (afhankelijk van de kijkrichting)</p>
+    <br>
+    <h2>Thor</h2>
+    <p>Moves: stapVooruit, stapAchteruit, vliegOmhoog vliegOmlaag, vliegVooruit, spring, draai</p>
+    <p>Specialekracht: “Thunder strike”:  Thor maakt bliksem boven zijn hoofd, hij sloopt daardoor alle solidblocks boven hem</p>
+    <img src="/assets/Resources/img/heroes/thorSpecialkrachtExplained.png" width="15%">
+    <br>
+    <h2>Wonder Woman</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht: “Zweep”: Wonder woman pakt haar zweep en gooit hem haar kijkrichting op (4 tiles), deze zweep pakt alle items op (key, extra life en energie tank)</p>
+    <img src="/assets/Resources/img/heroes/wonderwomanSpecialkrachtExplained.png" width="15%">
+    <br>
+    <h2>Superman</h2>
+    <p>Moves: draai, vliegOmhoog, vliegVooruit, vliegOmlaag</p>
+    <p>Specialekracht: “Super hero landing”: Superman stopt met vliegen valt naar beneden tot hij op een ondergrond staat, dit heeft geen “val kosten”</p>
+    <br>
+    <h2>The Flash</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht: “FLASH”: the Flash verplaatst 3 tiles naar de richting waar hij op kijkt. Als zijn bestemming een solidblock is teleporteert hij NIET</p>
+    <br>
+    <h2>Spiderman</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht: "WallClimb" Spiderman heeft door zijn spinnen krachten de mogelijkheid om tegen een muur op te klimmen!</p>
+    <br>
+    <h2>Scarlet Witch</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht: “Hexes”: Scarlett maakt een solidblock in de richting waar ze naar kijkt</p>
+    <img src="/assets/Resources/img/heroes/scarletwitchSpecialkrachtExplained.png" width="15%">
+    <br>
+    <h2>Black Panther</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht:  “Sneakers”: Black panther zijn schoenen zijn van speciaal materiaal, hierdoor kan hij over spikes heenlopen</p>
+    <br>
+    <h2>Black Widow</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht:  “Bommen onschadelijk maken”: Black widow maakt de bom waar ze naar kijkt (afhankelijk van de kijkrichting) onschadelijk.</p>
+    <br>
+    <h2>Deadpool</h2>
+    <p>Moves: stapVooruit, stapAchteruit, spring, draai</p>
+    <p>Specialekracht:  Deadpool begint met 2 levens in plaats van 1</p>
+    <br>
+    <h2>Doctor Strange</h2>
+    <p>Moves: stapVooruit, stapAchteruit, vliegOmhoog vliegOmlaag, spring, draai</p>
+    <p>Specialekracht:  “Eye of Agamotto”: Docter strange gaat terug de tijd in en gaat naar de locatie waar hij 5 stappen geleden was. Als hij nog minder dan 5 stappen heeft gelopen gaat hij terug naar het begin</p>
+
+
+
+
+
+
+  </div>
+
+
+
+</div>

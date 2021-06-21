@@ -1,0 +1,35 @@
+
+.score {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  height: 20%;
+}
+
+.score td, #score th {
+  border: 1px solid #ddd;
+  padding: 2px;
+  text-align: center;
+}
+
+.score tr:nth-child(even){background-color: #f2f2f2;}
+
+.score tr:hover {background-color: #ddd;}
+
+.score th {
+  text-align: center;
+  background-color: #32B8B0;
+  color: white;
+}
+
+#manualDiv{
+  width: 50%;
+  margin-left: 10%;
+}
+
+a {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+
+}

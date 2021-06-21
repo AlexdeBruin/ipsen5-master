@@ -1,0 +1,161 @@
+ <div id="tableDiv">
+    <table id="costCard">
+      <tr>
+        <th>Import Kosten</th>
+        <th>Run Kosten</th>
+        <th>Statement & straf Kosten</th>
+      </tr>
+
+      <tr>
+        <td>
+          <p >Zwart Oog</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_import_zwoog" min="1" max="5000" type="number"/>
+        </td>
+        <td>
+          <p >Zwart oog</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_zwoog" min="1" max="5000" type="number"/>
+        </td>
+        <td>
+          <p >If</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_if" min="1" max="5000" type="number"/>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <p >Kleur Oog</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_import_kleuroog" min="1" max="5000" type="number"/>
+        </td>
+        <td>
+          <p >Kleur oog</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_kleuroog" min="1" max="5000" type="number"/>
+        </td>
+        <td>
+          <p >While</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_while" min="1" max="5000" type="number"/>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+          <p >Speciale Move</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_import_specialeAanval" min="5" max="5000" type="number"/>
+        </td>
+        <td>
+          <p >Speciale move</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cot_run_specialeAanval" min="5" max="5000" type="number">
+        </td>
+        <td>
+          <p >Variabelen</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_var" min="5" max="5000" type="number"/>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+        <td>
+          <p >Vergelijking</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_comparison" min="1" max="5000" type="number"/>
+        </td>
+        <td>
+          <p>Toekenning</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_assign" min="1" max="5000" type="number"/>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+        <td>
+          <p>Uitvoering</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_operation" min="1" max="5000" type="number"/>
+        </td>
+        <td>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+        <td>
+          <p >Stapvooruit</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_stapVooruit" min="5" max="5000" type="number"/>
+        </td>
+        <td>
+          <p>Botsen</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_punishment_botsen"min="5" max="5000" type="number"/>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <p >Stapachteruit</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_stapAchteruit"min="5" max="5000" type="number"/>
+        </td>
+        <td>
+          <p >Vallen</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_punishment_vallen" min="1" max="5000" type="number"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <p >Draaien</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_draai" min="5" max="5000" type="number"/>
+        </td>
+        <td></td>
+      </tr>
+
+
+      <tr>
+        <td></td>
+        <td>
+          <p >VliegOmhoog</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_vliegOmhoog" min="5" max="5000" type="number"/>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <p >VliegOmlaag</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_vliegOmlaag" min="5" max="5000" type="number"/>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <p >VliegVooruit</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_vliegVooruit" min="5" max="5000" type="number"/>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>
+          <p style="font-size: 15px">Energy</p>
+          <input [attr.disabled]="!isBuilding ? '' : null" style="width: 20%; float: none" [(ngModel)]="puzzleService.costcard.energy" min="5" max="5000" type="number"/>
+        </td>
+        <td>
+          <p >Jump</p>
+          <input [attr.disabled]="!isBuilding ? '' : null"  [(ngModel)]="puzzleService.costcard.cost_run_jump" min="5" max="5000" type="number"/>
+        </td>
+        <td></td>
+      </tr>
+
+    </table>
+
+  </div>
+

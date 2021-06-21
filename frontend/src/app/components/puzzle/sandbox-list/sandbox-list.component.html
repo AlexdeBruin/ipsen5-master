@@ -1,0 +1,16 @@
+<div id="title">
+  <h1>Zandbak Puzzels</h1>
+  <hr size="2" noshade width="40%">
+</div>
+
+<div id="tableDiv">
+  <p style="text-align: center" *ngIf="!idslist || idslist.length == 0">Er zijn op dit moment geen zandbox puzzels aanwezig.</p>
+  <table *ngIf="idslist.length > 0" id="sandboxItems">
+    <th>Zandbak puzzles</th>
+
+    <tr *ngFor="let id of idslist">
+      <td><a [routerLink]="['/sandboxsolver']" [queryParams]="{ puzzle: id}">Zandbak<div *ngIf="isSmallerThan10(id)" style="display: inline-block">0</div>{{id}}</a></td>
+    </tr>
+  </table>
+</div>
+

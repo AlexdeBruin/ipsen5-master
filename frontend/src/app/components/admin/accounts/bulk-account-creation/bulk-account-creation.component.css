@@ -1,0 +1,65 @@
+#pageTitle{
+  width: 500px;
+  margin: auto;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #545454;
+}
+
+button{
+  min-width: 100px;
+  height: 40px;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: #32B8B0;
+  align-items: flex-end;
+}
+
+button:hover{
+  background-color: #52a398;
+}
+
+button:disabled{
+  background-color: #668b86;
+}
+
+input{
+  width: 100%;
+  border-radius: 3px;
+  height: 25px;
+  border-color: #7FB8B4;
+  border-style: solid;
+  padding: 1px;
+}
+
+input[type = radio]{
+  width: auto;
+}
+
+label{
+  margin-bottom: 2px;
+  margin-right: 10px;
+}
+
+#formDiv{
+  margin: auto;
+  width: 20%;
+}
+
+@media screen and (max-width: 600px){
+
+  #pageTitle h1{
+    font-size: 20px}
+
+  button{
+    font-size: 10px;
+  }
+  label{
+    font-size: 10px;
+  }
+}

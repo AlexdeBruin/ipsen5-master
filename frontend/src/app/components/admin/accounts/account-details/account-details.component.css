@@ -1,0 +1,76 @@
+#accountInfoContainer{
+  margin: 10px;
+}
+button{
+  min-width: 160px;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: #32B8B0;
+  align-items: flex-end;
+}
+
+button:hover{
+  background-color: #52a398;
+}
+
+table{
+  width: 100%;
+}xw
+#contentDiv{
+  margin: auto;
+  width: 50%;
+  display: block;
+}
+
+#buttonDiv{
+  display: inline-block;
+  width: 100%;
+  margin-top: 30%;
+  margin-left: 10%;
+}
+
+/*tr {*/
+  /*text-align: left;*/
+/*}*/
+
+/*td{*/
+  /*padding-left: 80px;*/
+/*}*/
+
+#infoItems {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+
+#infoItems td, #infoItems th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  width: 300px;
+}
+
+#infoItems tr:nth-child(even){background-color: #f2f2f2;}
+
+#infoItems tr:hover {background-color: #ddd;}
+
+#infoItems th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #32B8B0;
+  color: white;
+  font-weight: 100;
+}
+
+#infoItems button{
+  float: right;
+}
+
+

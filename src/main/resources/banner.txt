@@ -1,0 +1,9 @@
+================================================================================
+
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ipose.
+       PROCEDURE DIVISION.
+           DISPLAY "IPOSE OMGEVING WORDT OPGESTART..."
+       
+================================================================================
+

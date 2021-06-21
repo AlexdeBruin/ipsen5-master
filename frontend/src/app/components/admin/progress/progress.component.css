@@ -1,0 +1,44 @@
+
+.accountsTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  overflow: auto;
+  height: 300px;
+}
+
+.accountsTable td, .accountsTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.accountsTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.accountsTable tr:hover {background-color: #ddd;}
+
+.accountsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #32B8B0;
+  color: white;
+}
+
+.btn{
+  margin-top: 20px;
+  display: inline-block;
+  min-width: 80px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #32B8B0;
+  margin-left:10px;
+  tabindex: -1;
+}
+
+.btn:hover{
+  background-color: #32a8a0;
+}

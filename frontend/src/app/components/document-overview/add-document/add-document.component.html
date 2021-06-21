@@ -1,0 +1,42 @@
+<div id="pageTitle">
+  <h1>Documenten Uploaden</h1>
+  <hr size="2" noshade>
+</div>
+
+<div id="formDiv">
+
+  <form (ngSubmit)="uploadModuleInstructions()">
+
+    <h3>Uploaden Modulehandleiding</h3>
+
+    <div class="form-group">
+      <label for="file">Choose File</label>
+      <input type="file"
+             id="file"
+             accept=".pdf"
+             (change)="handleFileInputModuleInstructions($event.target.files)">
+    </div>
+
+    <button type="submit" [disabled]="!moduleInstructionsIsValid()">Submit</button>
+
+  </form>
+
+  <form (ngSubmit)="uploadModuleGuide()">
+
+    <h3>Uploaden Modulewijzer</h3>
+
+    <div class="form-group">
+      <label for="file">Choose File</label>
+      <input type="file"
+             id="file"
+             accept=".pdf"
+             (change)="handleFileInputModuleGuide($event.target.files)">
+    </div>
+
+    <button type="submit" [disabled]="!moduleGuideIsValid()">Submit</button>
+
+  </form>
+
+</div>
+
+

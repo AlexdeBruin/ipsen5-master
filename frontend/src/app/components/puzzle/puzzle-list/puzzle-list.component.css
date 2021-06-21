@@ -1,0 +1,59 @@
+#title{
+  text-align: center;
+  color: #545454;
+}
+
+#opdrachten {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#opdrachten td, #opdrachten th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+#opdrachten tr:nth-child(even){background-color: #f2f2f2;}
+
+#opdrachten tr:hover {background-color: #ddd;}
+
+#opdrachten th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #32B8B0;
+  color: white;
+}
+
+#tableDiv{
+  margin: auto;
+  width: 50%;
+  margin-top: 4%;
+}
+
+@media screen and (max-width: 570px){
+
+  #tableDiv{
+    margin-left: 10%;
+  }
+
+}
+
+@media screen and (max-width: 450px){
+
+  #tableDiv{
+    margin-left: 2%;
+  }
+
+}
+
+@media screen and (max-width: 420px){
+
+  #tableDiv{
+    font-size: 10px;
+  }
+
+}

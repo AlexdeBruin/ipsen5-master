@@ -1,0 +1,48 @@
+<div id="accountInfoContainer">
+
+  <div id="contentDiv">
+
+    <table id="infoItems">
+      <tr>
+        <th>Type</th>
+        <th>Waarde</th>
+      </tr>
+      <tr>
+        <td>Account Naam: </td>
+        <td>{{ account.username }}</td>
+      </tr>
+      <tr>
+        <td>Account Type: </td>
+        <td>{{ account.accountRole.roleName | accountRole }}</td>
+      </tr>
+      <tr>
+        <td>Moet wachtwoord veranderen: </td>
+        <td>{{ account.requiresPasswordChange | yesNo }}</td>
+      </tr>
+      <tr>
+        <td>Account Actief:</td>
+        <td>{{ account.active | yesNo }}</td>
+      </tr>
+      <tr></tr>
+      <tr style="background-color: transparent !important;">
+        <td style="background-color: transparent">
+
+        </td>
+        <td style="background-color: transparent !important;">
+          <button [routerLink]="['../changePassword', account.username]">Wachtwoord veranderen</button>
+          <button [routerLink]="['../changeRole', account.username]">Rol veranderen</button>
+          <button [routerLink]="['../changeName', account.username]">Naam veranderen</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <!--<div id="buttonDiv">-->
+    <!--<button [routerLink]="['../changePassword', account.username]">Wachtwoord veranderen</button>-->
+    <!--<button [routerLink]="['../changeRole', account.username]">Rol veranderen</button>-->
+    <!--<button [routerLink]="['../changeName', account.username]">Naam veranderen</button>-->
+  <!--</div>-->
+</div>
+
+

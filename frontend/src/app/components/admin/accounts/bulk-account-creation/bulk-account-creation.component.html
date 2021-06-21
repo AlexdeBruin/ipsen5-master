@@ -1,0 +1,57 @@
+<div *ngIf="!hasAddedAccounts">
+  <div id="pageTitle">
+    <h1>Voeg Meerdere Accounts Toe</h1>
+    <hr size="2" noshade>
+  </div>
+  <div id="formDiv">
+    <form [formGroup]="bulkAccountCreationForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="amount">Hoeveelheid accounts</label>
+        <input type="number" id="amount" formControlName="amount">
+      </div>
+      <div>
+        <p>Wat voor accounts moeten dit worden?</p>
+        <label>
+          <input type="radio" formControlName="accountRole" value="GROUP">
+          Groep
+        </label>
+        <label>
+          <input type="radio" formControlName="accountRole" value="ADMIN">
+          Administrator
+        </label>
+      </div>
+      <div>
+        <label for="baseName">Basisnaam</label>
+        <input type="text"
+               placeholder="groep"
+               formControlName="baseName"
+               id="baseName">
+      </div>
+      <div style="display: inline-block">
+        <button type="submit" [disabled]="!bulkAccountCreationForm.valid">
+          {{bulkAccountCreationForm.get('amount').value}} accounts toevoegen
+        </button>
+        <button routerLink="../overview">Terug naar accountoverzicht</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="hasAddedAccounts">
+  <div style="margin: auto; width: 25%">
+    <h2>Accounts toegevoegd</h2>
+    <p>De volgende accounts zijn toegevoegd</p>
+    <div *ngFor="let account of accountsToBeAdded">
+      <dl>
+        <dt>Gebruikersnaam:</dt>
+        <dd>{{ account.username }}</dd>
+        <dt>Wachtwoord:</dt>
+        <dd>{{ account.password }}</dd>
+      </dl>
+    </div>
+
+    <button routerLink="/admin/accounts">Terug naar account overzicht</button>
+
+  </div>
+
+</div>

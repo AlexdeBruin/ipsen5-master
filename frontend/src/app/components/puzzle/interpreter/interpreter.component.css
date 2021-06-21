@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.ace_editor, .ace_editor *
+{
+  font-family: Monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+div {
+  font-family: Monospace !important;
+
+}
+
+
+/*.codeArea{*/
+  /*height: 320px;*/
+  /*width: 400px;*/
+  /*border-radius: 5px;*/
+  /*border-color: #1d8971;*/
+  /*background-color: #58DBD3;*/
+  /*background-attachment: local;*/
+  /*background-repeat: no-repeat;*/
+  /*padding-left: 35px;*/
+  /*padding-top: 10px;*/
+  /*color: #7d7b7b;*/
+/*}*/

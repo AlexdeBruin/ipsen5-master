@@ -1,0 +1,34 @@
+<div id="title">
+  <h1>Opdrachten</h1>
+  <p>{{solvedPercentage}}% opgelost</p>
+  <hr size="2" noshade width="40%">
+</div>
+
+
+
+<div id="tableDiv">
+  <table id="opdrachten">
+    <tr>
+      <th>Openstaand</th>
+      <th>Geprobeerd</th>
+      <th>Opgelost+</th>
+      <th>Opgelost</th>
+      <th>Niet Opgelost</th>
+    </tr>
+
+    <tr *ngFor="let number of numbers">
+      <td *ngIf="isListElement(todo[number])"><a [routerLink]="['/puzzlesolver']" [queryParams]="{ puzzle: todo[number].puzzle.id}">{{todo[number].username}}</a></td>
+      <td *ngIf="!isListElement(todo[number])"></td>
+      <td *ngIf="isListElement(tried[number])"><a [routerLink]="['/puzzlesolver']" [queryParams]="{ puzzle: tried[number].puzzle.id}">{{tried[number].username}}</a></td>
+      <td *ngIf="!isListElement(tried[number])"></td>
+      <td *ngIf="isListElement(doneNoAttemptsLeft[number])"><a [routerLink]="['/puzzlesolver']" [queryParams]="{ puzzle: doneNoAttemptsLeft[number].puzzle.id}">{{doneNoAttemptsLeft[number].username}}</a></td>
+      <td *ngIf="!isListElement(doneNoAttemptsLeft[number])"></td>
+      <td *ngIf="isListElement(done[number])"><a [routerLink]="['/puzzlesolver']" [queryParams]="{ puzzle: done[number].puzzle.id}">{{done[number].username}}</a></td>
+      <td *ngIf="!isListElement(done[number])"></td>
+      <td *ngIf="isListElement(fail[number])"><a [routerLink]="['/puzzlesolver']" [queryParams]="{ puzzle: fail[number].puzzle.id}">{{fail[number].username}}</a></td>
+      <td *ngIf="!isListElement(fail[number])"></td>
+    </tr>
+
+  </table>
+
+</div>

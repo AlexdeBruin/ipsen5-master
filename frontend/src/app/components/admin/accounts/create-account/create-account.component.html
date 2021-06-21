@@ -1,0 +1,43 @@
+<div id="pageTitle">
+  <h1>Nieuw Acount Aanmaken</h1>
+  <hr size="2" noshade>
+</div>
+<div id="formDiv">
+  <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Gebruikersnaam</label>
+      <input id="username" formControlName="username" type="text">
+    </div>
+    <div>
+      <label for="password">Wachtwoord</label>
+      <input id="password" formControlName="password" type="password">
+    </div>
+    <div>
+      <label for="passwordAgain">Herhaal wachtwoord</label>
+      <input id="passwordAgain" formControlName="passwordAgain" type="password">
+    </div>
+    <div>
+      <label>
+        <input type="radio" formControlName="accountRole" value="GROUP">
+        Groep
+      </label>
+      <label>
+        <input type="radio" formControlName="accountRole" value="ADMIN">
+        Administrator
+      </label>
+    </div>
+    <div class="warningMessage" *ngIf="!passwordsMatch()">
+      <p>Wachtwoorden komen niet met elkaar overeen</p>
+    </div>
+    <div class="warningMessage" *ngIf="passwordTooShort()">
+      <p>Wachtwoord moet minimaal acht tekens lang zijn</p>
+    </div>
+    <button type="submit"
+            [disabled]="!accountForm.valid || !passwordsMatch()">
+      Account aanmaken voor {{accountForm.get('username').value}}
+    </button>
+    <button routerLink="../overview">Terug naar accountoverzicht</button>
+  </form>
+  <div>
+  </div>
+</div>

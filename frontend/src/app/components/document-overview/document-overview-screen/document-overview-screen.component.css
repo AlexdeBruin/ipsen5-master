@@ -1,0 +1,67 @@
+#title{
+  text-align: center;
+  color: #545454;
+}
+
+.document {
+  width: 50%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left:25%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  background-color: #32B8B0;
+
+  border: 5px #32B8B0 solid;
+  border-radius: 5px;
+  height: 680px;
+  overflow: scroll;
+}
+
+pdf-viewer{
+    display: block;
+}
+
+.buttonDiv{
+  display: block;
+  width: 200px;
+  float: left;
+  margin-left: 100px;
+  background-color: #32B8B0;
+}
+
+button{
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  font-size: 20px;
+  border: 1px #58DBD3 solid;
+  color: #545454;
+}
+
+#documentsTitle{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background-color: #32B8B0;
+  padding-top: 10px;
+  font-size: 22px;
+  border: 1px #58DBD3 solid;
+  color: #545454;
+}
+
+@media screen and (max-width: 1250px) {
+  .buttonDiv{
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .buttonDiv{
+    float: none;
+    margin-left: 30%;
+  }
+
+}

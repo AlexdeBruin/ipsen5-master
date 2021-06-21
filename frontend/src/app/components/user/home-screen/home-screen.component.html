@@ -1,0 +1,36 @@
+<div class="menu">
+  <div id="pageTitle">
+    <h1>SE-Challenge Week</h1>
+    <hr size="2" noshade>
+  </div>
+
+  <div id="menuButtonsTop">
+
+    <button id="highScore"  [routerLink]="['/highscore']">
+      <p>HighScore</p>
+    </button>
+    <button id="puzzle" [routerLink]="['/puzzleBuilder']" [disabled]="!isProduction()">
+      <p>Puzzel</p>
+    </button>
+    <button style="margin-right: 0px" id="assignments" [routerLink]="['/puzzlelist']" [disabled]="!isProduction()">
+      <p>Opdrachten</p>
+    </button>
+
+  </div>
+
+  <div id="menuButtonsBottom">
+
+    <button id="sandbox" [routerLink]="['/sandboxlist']" [disabled]="!isSandbox()">
+      <p>Zandbak</p>
+    </button>
+    <button id="achievemens">
+      <p>Achievements</p>
+    </button>
+    <button style="margin-right: 0px" id="documents" [routerLink]="['/documentoverview']">
+      <p>Documenten</p>
+    </button>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,30 @@
+<div class="centerDiv">
+  <h1>Software Engineering <br> Challenge Week</h1>
+
+  <div id="login_form">
+    <form action="">
+      <div class="input-field">
+        <input type="text" id="userName" required [(ngModel)]="credentials.username" name="username" />
+        <label for="userName">Gebruikersnaam</label>
+      </div>
+    </form>
+
+    <form action="">
+      <div class="input-field">
+        <input type="password" id="password" required [(ngModel)]="credentials.password" name="password"/>
+        <label for="password">Wachtwoord</label>
+      </div>
+    </form>
+
+    <button (click)="tryLogin()">Login</button>
+  </div>
+</div>
+
+<div id="sideArt">
+  <img src="../../../../assets/Resources/img/batman_side.png" id="batmanImg">
+  <img src="../../../../assets/Resources/img/ironman_side.png" id="ironmanImg">
+
+
+</div>
+
+

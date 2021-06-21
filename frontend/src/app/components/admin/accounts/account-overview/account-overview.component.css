@@ -1,0 +1,113 @@
+#pageTitle{
+  width: 500px;
+  margin: auto;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #545454;
+}
+
+#tableDiv{
+  max-height: 400px;
+  overflow: auto;
+}
+
+#accountListDiv{
+  width: 200px;
+  margin-left: 100px;
+  float: left;
+
+}
+
+#accountList {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+
+}
+
+#accountList td, #accountList th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#accountList tr:nth-child(even){background-color: #f2f2f2;}
+
+#accountList tr:hover {background-color: #ddd;}
+
+#accountList th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #32a8a0;
+  color: white;
+}
+
+#accountDetailDiv{
+  width: 40%;
+  height: 500px;
+  display: inline-block;
+  margin-left: 200px;
+}
+
+#accountDetailDiv p {
+  text-align: center;
+}
+
+button{
+  width: 180px;
+  height: 50px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  margin-left: 10px;
+  background-color: #32B8B0;
+}
+
+button p {
+  position: relative;
+  top: -70px;
+}
+
+button:hover{
+  background-color: #52a398;
+}
+
+#account-creation-links{
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+
+@media screen and (max-width: 900px){
+
+  #accountDetailDiv{
+    margin-left: 100px;
+  }
+
+}
+
+@media screen and (max-width: 700px){
+
+  #accountDetailDiv{
+    margin-left: 25px;
+  }
+
+}
+
+@media screen and (max-width: 630px){
+
+  #accountDetailDiv{
+    display: block;
+    margin-top: 600px;
+    margin-left: 100px;
+  }
+
+  #accountListDiv{
+    display: block;
+  }
+
+}
+

@@ -1,0 +1,21 @@
+<div *ngIf="account">
+  <div id="pageTitle">
+    <h1>Naam veranderen voor {{ account.username }}</h1>
+    <hr size="2" noshade>
+  </div>
+  <div id="formDiv">
+    <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="newUsername">Nieuwe gebruikersnaam</label>
+        <input type="text"
+               id="newUsername"
+               formControlName="newUsername">
+      </div>
+      <div style="display: inline-block">
+        <button type="submit" [disabled]="!accountForm.valid">Naam veranderen</button>
+        <button routerLink="/admin/accounts">Terug naar overzicht</button>
+      </div>
+    </form>
+  </div>
+
+</div>

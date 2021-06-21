@@ -1,0 +1,106 @@
+#title{
+  text-align: center;
+  color: #545454;
+}
+
+#opdrachten {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#opdrachten td, #opdrachten th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+#opdrachten tr:nth-child(even){background-color: #f2f2f2;}
+
+#opdrachten tr:hover {background-color: #ddd;}
+
+#opdrachten th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #32B8B0;
+  color: white;
+}
+
+#opdrachten{
+  margin: auto;
+}
+
+#tableDiv{
+  margin: auto;
+  width: 50%;
+}
+
+#thropyDiv{
+  margin-left: 30%;
+  margin-top: 4%;
+  width: 400px;
+}
+
+.btn{
+  width: 100px;
+  height: 40px;
+  color: white;
+  margin-left: 0px;
+  font-size: 20px;
+  background-color: #32B8B0;
+  margin-left:10px;
+}
+
+@media screen and (max-width: 1400px){
+
+  #thropyDiv{
+    margin-left: 25%;
+  }
+
+}
+
+@media screen and (max-width: 1200px){
+
+  #thropyDiv{
+    margin-left: 20%;
+  }
+
+}
+
+@media screen and (max-width: 1055px){
+
+  #thropyDiv{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+  }
+
+  #second, #first, #third{
+    height: 0px;
+  }
+
+}
+
+@media screen and (max-width: 450px){
+
+  #thropyDiv{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+  }
+
+  #second, #first, #third{
+    height: 0px;
+  }
+
+  #tableDiv{
+    margin-left: 10%;
+  }
+
+}
+
+

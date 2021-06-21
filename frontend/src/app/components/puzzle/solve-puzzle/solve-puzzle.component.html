@@ -1,0 +1,113 @@
+<div id="title">
+  <h1 *ngIf=!sandbox>Opdrachten</h1>
+  <h1 *ngIf=sandbox>Zandbak</h1>
+  <hr size="2" noshade width="40%">
+</div>
+
+<div id="puzzleBody">
+  <p *ngIf=noPuzzle >Geen puzzel gevonden</p>
+  <div  class="grid-container" >
+    <div id="levelGrid" *ngFor="let i of levelGrid">
+      <div *ngFor="let j of i">
+        <div class="tooltip">
+            <span class="tooltiptext">
+              <span>x: {{j.tile_x}} y: {{j.tile_y}} value: {{j.backgroundBlock ? j.backgroundBlock.value : 1}}</span>
+              <br/>
+              <span *ngIf="j.tileMap">
+                <span  *ngFor="let keypair of j.tileMap.values">
+                  <div>
+                    <label for="{{keypair.name}}">{{keypair.name}}</label>
+                    <input readonly  maxlength="4" size="4" id="{{keypair.name}}" type="text" [(ngModel)]="keypair.value">
+                  </div>
+                </span>
+              </span>
+            </span>
+          <div ngClass="{{className}}">
+            <img src="{{j.backgroundBlock ? j.backgroundBlock.imageSrc : '/assets/Resources/img/tiles/transparent_block.png' }}" width="32px" height="32px">
+            <img src="{{j.forgroundBlock ? j.forgroundBlock.imageSrc : '/assets/Resources/img/tiles/transparent_block.png' }}" width="32px" height="32px" class="top" id="topImage">
+            <span *ngIf="solution">
+              <span *ngIf="solution.positions != null && solution.positions.length > 0">
+              <img *ngIf="solution.positions[coordsPosition].x == j.tile_x && solution.positions[coordsPosition].y == j.tile_y " src="{{solution.hero.imageSrc ? solution.hero.imageSrc : '/assets/Resources/img/tiles/transparent_block.png' }}" class="animationImage" alt="">
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="tabDiv">
+
+  <div class="tab">
+    <button (click)="showCodeView()" ngClass="{{tab2ClassName}}">Code</button>
+    <button (click)="showCostView()" ngClass="{{tab3ClassName}}">Kosten Kaart</button>
+    <button (click)="showHeroView()" ngClass="{{tab1ClassName}}">Heroes</button>
+  </div>
+
+  <div class="tabcontent" *ngIf="isCodeView">
+    <hr size="2" noshade color="white" width="90%">
+    <p>Code</p>
+    <hr size="2" noshade color="white" width="90%">
+
+    <div style="height: 500px">
+      <textarea id="codeArea" spellcheck="false" (change)="doTextareaValueChange($event)"></textarea>
+      <div id="consoleDiv">
+        <p style="padding: 0px; margin: 0px; display: inline-block">Console</p>
+        <button style="display:inline-block; float: right" (click)="toggleConsole()">expand</button>
+        <div id="consoleText" *ngFor="let logItem of consoleOutput">
+          {{logItem}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tabcontent" *ngIf="isCostView">
+    <div id="costcardDiv">
+      <div class="costCardBlock">
+        <app-cost-card [isBuilding]="false"></app-cost-card>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="tabcontent" *ngIf="isHeroView">
+    <hr size="2" noshade color="white" width="90%">
+    <p>Selectable Heroes</p>
+    <hr size="2" noshade color="white" width="90%">
+
+    <div id="HeroDiv">
+      <div *ngFor="let hero of heroesList" style="margin: 0px">
+        <img src="{{hero.imageSrc}}" width="64" height="64" style="align-self: center; display: inline-block; margin-left: 20px; margin-top: 30px">
+        <div id="heroInfoDiv">
+          <p style="font-size: 15px">{{hero.heroName}}</p>
+          <p style="font-size: 10px"> Methods: {{hero.methods}}</p>
+          <p style="font-size: 10px"> Special Move: {{hero.specialMove}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buttonDiv" >
+    <button class="btn" (click)="submitSolution()" *ngIf="isCodeView" [disabled]="checkAttempts()">Submit oplossing</button>
+    <button class="btn" (click)="toggleGridLines()" *ngIf="isCodeView">Gridlines</button>
+    <button class="btn" (click)="startAnimation()" *ngIf="isCodeView">Run</button>
+    <button class="btn" (click)="stopAnimation()" *ngIf="isCodeView">Stop</button>
+    <button class="btn" (click)="stepForwardsInAnimation()" *ngIf="isCodeView"><i class="fas fa-step-forward"></i></button>
+    <button class="btn" (click)="stopAnimation()" *ngIf="isCodeView && animationIsRunning"><i class="fas fa-pause"></i></button>
+    <button class="btn" (click)="continueAnimation()" *ngIf="isCodeView && !animationIsRunning"><i class="fas fa-play"></i></button>
+    <button class="btn" (click)="stepBackwardsInAnimation()" *ngIf="isCodeView"><i class="fas fa-step-backward"></i></button>
+    <br>
+    <div *ngIf="bestSolution" style="margin-top: 0px">
+      <button class="textTry">Pogingen: {{attempts}}</button>
+      <button class="textTry">Status: {{getSuccesText(bestSolution.succes)}}</button>
+      <button class="textTry">Score: {{bestSolution.score}}</button>
+    </div>
+
+  </div>
+</div>
+
+
+

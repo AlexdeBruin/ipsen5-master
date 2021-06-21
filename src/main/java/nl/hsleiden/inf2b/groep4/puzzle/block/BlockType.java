@@ -1,0 +1,21 @@
+package nl.hsleiden.inf2b.groep4.puzzle.block;
+
+public enum BlockType {
+
+	SOLIDBLOCK,
+	HEROBLOCK,
+	VILLIANBLOCK,
+	JUMPINGPAD,
+	SPEEDBOOST,
+	BOMB,
+	DOOR,
+	TELEPORT,
+	ITEM_ENERGYTANK,
+	ITEM_KEY,
+	ITEM_EXTRALIFE,
+	SPIKE,
+	INSTAKILLBLOCK,
+	MOVEABLEBLOCK,
+
+
+}

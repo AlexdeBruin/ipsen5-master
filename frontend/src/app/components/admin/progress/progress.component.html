@@ -1,0 +1,49 @@
+<div style="margin-left: 100px; margin-top: 100px">
+  <div style="width: 500px; display: inline-block; overflow: auto; height: 300px; margin-right: 100px">
+    <table class="accountsTable">
+      <tr>
+        <th>Groepsnaam</th>
+        <th>Puzzel opgeleverd</th>
+      </tr>
+
+      <tr *ngFor="let item of displayedList" (click)="onSelect(item)">
+        <td>{{item.username}}</td>
+        <td>{{item.submitted | yesNo}}</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div *ngIf="selectedItem" style="width: 500px; display: inline-block">
+
+    <table class="accountsTable">
+      <tr>
+        <th>Groep Details</th>
+      </tr>
+
+      <tr>
+        <td>Groepsname: {{selectedAccount.username}}</td>
+      </tr>
+      <tr>
+        <td>Actief: {{selectedAccount.active | yesNo}}</td>
+      </tr>
+      <tr>
+        <td>AccountType: {{selectedAccount.accountRole.roleName | accountRole}}</td>
+      </tr>
+      <tr>
+        <td>Wachtwoord verandering vereist: {{selectedAccount.requiresPasswordChange | yesNo}}</td>
+      </tr>
+      <tr>
+        <td>Aantal opgeloste puzzels: {{totalSolvedPuzzle}}</td>
+      </tr>
+    </table>
+
+
+  </div>
+
+  <div *ngIf="selectedItem" style="display: inline-block">
+    <!--<button class="btn" (click)="deletePuzzle()">Verwijder puzzel</button>-->
+  </div>
+
+
+</div>

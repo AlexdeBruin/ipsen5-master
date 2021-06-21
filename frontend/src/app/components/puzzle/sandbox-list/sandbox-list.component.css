@@ -1,0 +1,41 @@
+#title{
+  text-align: center;
+  color: #545454;
+}
+
+#sandboxItems {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+#sandboxItems td, #sandboxItems th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+#sandboxItems tr:nth-child(even){background-color: #f2f2f2;}
+
+#sandboxItems tr:hover {background-color: #ddd;}
+
+#sandboxItems th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #32B8B0;
+  color: white;
+  font-weight: 100;
+}
+
+a{
+  color: black;
+}
+
+#tableDiv{
+  margin: auto;
+  width: 50%;
+  margin-top: 4%;
+}

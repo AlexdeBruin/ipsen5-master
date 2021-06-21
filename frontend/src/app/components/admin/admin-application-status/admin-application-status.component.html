@@ -1,0 +1,20 @@
+<div class="menu">
+  <div id="pageTitle">
+    <h1>Omgeving status</h1>
+    <label>De huidige status is: {{status}}</label>
+    <hr size="2" noshade>
+  </div>
+
+  <div id="menuButtonsTop">
+
+    <button id="sandbox" [disabled]="status == 'sandbox'" (click)="changeStatus('sandbox')">
+      <p>Zandbak</p>
+    </button>
+    <button id="production" [disabled]="status == 'production'" (click)="changeStatus('production')">
+      <p>Productie</p>
+    </button>
+    <button style="margin-right: 0px" id="closed" [disabled]="status == 'closed'" (click)="changeStatus('closed')">
+      <p>Gesloten</p>
+    </button>
+  </div>
+</div>

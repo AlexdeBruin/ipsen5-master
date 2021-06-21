@@ -1,0 +1,22 @@
+<div id="container">
+
+  <div id="title">
+    <h1>Documenten</h1>
+    <hr size="2" noshade width="40%">
+  </div>
+
+  <div class="buttonDiv">
+    <div id="documentsTitle">Documenten</div>
+    <button (click)="showInstructions()">Modulehandleiding</button>
+    <button (click)="showGuide()" >Modulewijzer</button>
+  </div>
+
+  <div class=document>
+    <pdf-viewer
+      [src]="file"
+      [autoresize]="true"
+      [original-size]="false">
+    </pdf-viewer>
+  </div>
+</div>
+

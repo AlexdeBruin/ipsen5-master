@@ -1,0 +1,36 @@
+<div class="menu">
+  <div id="pageTitle">
+    <h1>Admin panel</h1>
+    <hr size="2" noshade>
+  </div>
+
+  <div id="menuButtonsTop">
+
+    <button id="accounts" [routerLink]="['../accounts']">
+      <p>Accounts</p>
+    </button>
+    <button id="omgevingstatus" [routerLink]="['../omgevingStatus']">
+      <p>Omgeving status</p>
+    </button>
+    <button style="margin-right: 0px" id="voortgang" [routerLink]="['../progress']">
+      <p>Voortgang</p>
+    </button>
+
+  </div>
+
+  <div id="menuButtonsBottom">
+
+    <button id="databse" [routerLink]="['../database']">
+      <p>Database</p>
+    </button>
+    <button id="sandbox" [routerLink]="['../puzzlebuilder']" >
+      <p>Zandbak Beheer</p>
+    </button>
+    <button style="margin-right: 0px" id="exitpanel" [routerLink]="['/home']">
+      <p>Exit panel</p>
+    </button>
+
+  </div>
+
+</div>
+
